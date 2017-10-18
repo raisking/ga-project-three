@@ -114,7 +114,7 @@ class MonthPage extends Component {
             <Wrapper>
                 <div>
                     <Container>
-                    <h2>{this.state.user.userName} Information</h2>
+                    <h2>{this.state.user.userName}'s' Information</h2>
                     <ul>    
                         {/* displays the user information */}
                         <li>Name:{this.state.user.userName} </li>
@@ -127,7 +127,7 @@ class MonthPage extends Component {
                     
                     </ul>
                     <button>Edit</button>
-                    {/* <button onClick={this.props.handleDelete.bind(this, `/api/users/${userId}`)}>Delete</button> */}
+                        {/* <button onClick={this.props.handleDelete.bind(this, `/api/users/${userId}`)}>Delete</button> */}
                     <button >Back</button>
                     </Container>
                     <h1>{this.state.user.userName} Monthly Income</h1>
