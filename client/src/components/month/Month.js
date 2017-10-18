@@ -65,7 +65,7 @@ const Month = (props) => {
         <button>{props.title}</button>
       </div>
     </IdeaStyles>
-
+  
   )
 }
 
