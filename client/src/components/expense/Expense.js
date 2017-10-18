@@ -14,7 +14,7 @@ const IdeaStyles = styled.div`
     }
     input, textarea {
       display: block;
-      font-size: 1em;
+      font-size: .9em;
       margin: 0;
       background-color: #fff;
       width: 100px;

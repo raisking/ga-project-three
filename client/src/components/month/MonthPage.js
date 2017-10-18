@@ -126,7 +126,7 @@ class MonthPage extends Component {
                         <li>Zipcode: {this.state.user.zipcode} </li>
                     
                     </ul>
-                    <button>Edit</button>
+         
                     <button>Delete</button>
 
                     </Container>

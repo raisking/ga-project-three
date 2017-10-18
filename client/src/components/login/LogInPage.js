@@ -36,9 +36,6 @@ class LogInPage extends Component {
       this.setState({users : res.data})
     }
 
-
-
-
     render() {
         return (         
             <div>       

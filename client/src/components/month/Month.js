@@ -11,7 +11,7 @@ import styled from 'styled-components'
   padding: 5px;
   input {
     display: block;
-    font-size: 1em;
+    font-size: .9em;
     margin: 0;
     border: none;
     background-color: #fff;

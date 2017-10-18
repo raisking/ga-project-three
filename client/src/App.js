@@ -84,7 +84,7 @@ class App extends Component {
           </Items>
           <ItemsA>
           <div>
-            <Link to="/login"><button>Information</button></Link>
+            <Link to="/login"><button>User</button></Link>
           </div>
           </ItemsA>
           <ItemsB>
