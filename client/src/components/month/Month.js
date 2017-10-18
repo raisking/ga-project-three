@@ -85,7 +85,7 @@ const Month = (props) => {
         <p>Total</p>
         <input type="Number" value={parseInt(props.salary + props.rental + props.investment)} />
         <button onClick={deleteMonth}> Delete Month </button>
-        <button>Detail</button>
+    
       </div>
     </IdeaStyles>
   

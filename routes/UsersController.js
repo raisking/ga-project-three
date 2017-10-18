@@ -34,20 +34,6 @@ router.delete('/:userId', async(req, res) => {
     const user = await User.findById(req.params.userId)
     res.json(saved)
 })
-// router.get('/:userId/delete', (request, response) => {
-//     //Grab the userId that you want to delete from the parameter
-//     const userId = request.params.userId
-//     //Use the UserModel to find and delete the User in the database
-//     User.findByIdAndRemove(userId)
-//         .then(() => {
-//             //Then once the user has been deleted from the database
-//             //redirect back to the user index
-//             response.redirect('/login')
-//         })
-//         .catch((error) => {
-//             console.log(error)
-//         })
-// })
 
 
 module.exports = router;
