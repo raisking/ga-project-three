@@ -12,7 +12,8 @@ const Wrapper = styled.div`
 background-color: #3b68af;
 color: #000;
 padding: 30px;
-width: 80%;
+width: 60%;
+margin: 0 auto;
 button{
     background: #13527d;
     background-image: -webkit-linear-gradient(top, #13527d, #2980b9);
@@ -108,8 +109,7 @@ class MonthPage extends Component {
                 <div>
                     <Container>
                     <h2>User Information</h2>
-                    <ul>
-                     
+                    <ul>    
                         {/* displays the user information */}
                         <li>Name: {this.state.user.userName} </li>
                         <li>Password: {this.state.user.password} </li>

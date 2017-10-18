@@ -6,12 +6,11 @@ import styled from 'styled-components'
 const Wrapper= styled.div`
 background-color: #ccc;
 color: #000;
-padding: 30px;
+padding: 50px;
 width: 80%;
 `
 const Container= styled.div`
 border: 1px solid #000;
-background-color: #6666ff;
 color: #000;
 padding: 30px;
 width: 80%;
@@ -19,7 +18,6 @@ width: 80%;
 const ContainerA= styled.div`
 margin-top: 5px;    
 border: 1px solid #000; 
-background-color: #3399ff;
 color: #000;
 padding: 30px;
 width: 80%;
@@ -36,12 +34,11 @@ class LogInPage extends Component {
       this.setState({users : res.data})
     }
     render() {
-        return (
-           
-            <div>
-              <h2> User Information </h2>
+        return (         
+            <div>       
                 <Wrapper>
                 <div>
+                <h2> User Information </h2>
                     <Container>
                         <p>User details</p>
                     {this.state.users.map(user => {

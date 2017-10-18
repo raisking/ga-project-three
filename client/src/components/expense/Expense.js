@@ -43,12 +43,12 @@ const Expense = (props) => {
   return (
     <IdeaStyles>
       <div>
-        <span>Rent</span>
+        <p>Rent</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="rent" placeholder="rent" value={props.rent} />
 
-        <span>Gas</span>
+        <p>Gas</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="gas" placeholder="gas" value={props.gas} />

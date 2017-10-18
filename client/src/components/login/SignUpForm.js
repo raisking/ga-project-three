@@ -37,6 +37,7 @@ button{
   input{
       width: 250px;
       height: 20px;
+      margin-bottom: 12px;
   }
 `
 
@@ -69,9 +70,7 @@ class SignUpForm extends Component {
         return (
             <Wrapper>
                 <div>
-
-                    <h2>Sign up a new user</h2>
-
+                    <h2>Create a new user account</h2>
                     <form onSubmit={this.handleSubmit}>
                         <div>
                             <label htmlFor="userName"> User Name</label>

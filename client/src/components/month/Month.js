@@ -62,7 +62,7 @@ const Month = (props) => {
        
         {/* <input onBlur={updateMonth} onChange={handleChange} name="description" value={props.description} /> */}
         <button onClick={deleteMonth}> Delete Month </button>
-        <button>{props.title}</button>
+        <button>Detail</button>
       </div>
     </IdeaStyles>
   

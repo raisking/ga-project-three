@@ -7,11 +7,12 @@ import MonthPage from './components/month/MonthPage'
 import styled from 'styled-components'
 
 const Wrapper= styled.div`
-border: 1px solid #fff;
-    display: flex;
-    justify-content: center;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
    background-color: #fff;
    height: 700px; 
+  
    button{
     background: #13527d;
     background-image: -webkit-linear-gradient(top, #13527d, #2980b9);
@@ -87,9 +88,9 @@ class App extends Component {
           </div>
           </ItemsA>
           <ItemsB>
-          <div>
+          {/* <div>
             <Link to="/"><button>User</button></Link>
-          </div>
+          </div> */}
           </ItemsB>
           <Switch>
             {<Route exact path="/" component={HomePage} />}
