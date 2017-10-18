@@ -12,7 +12,20 @@ const expenseSchema = mongoose.Schema({
     grocery: {
         type: Number,
         required: true
+    },
+    insurance: {
+        type: Number,
+        required: true
+    },
+    internet: {
+        type: Number,
+        required: true
+    },
+    phone: {
+        type: Number,
+        required: true
     }
+
 })
 const monthSchema = mongoose.Schema({
     title: {

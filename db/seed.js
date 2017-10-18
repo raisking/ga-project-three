@@ -7,9 +7,13 @@ mongoose.Promise = global.Promise
 const { User, Month, Expense } = require('./schema')
 
 const expense = new Expense({
-    rent: 990,
-    gas: 900,
-    grocery: 690
+    rent: 1000,
+    gas: 400,
+    grocery: 400,
+    insurance: 500,
+    internet: 80,
+    phone: 100
+
 })
 
 const january = new Month({

@@ -60,24 +60,40 @@ const Expense = (props) => {
     <IdeaStyles>
       <div>
         <span>List of Expenses</span>
-        <Wrapper>
+    
 
           <p>Rent</p>
           <input onBlur={updateExpense}
             onChange={handleChange}
             name="rent" placeholder="rent" value={props.rent} />
-        </Wrapper>
-
-        <p>Grocery</p>
-        <input onBlur={updateExpense}
-          onChange={handleChange}
-          name="gas" placeholder="gas" value={props.gas} />
+     
 
         <p>Gas</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
+          name="gas" placeholder="gas" value={props.gas} />
+
+        <p>Grocery</p>
+        <input onBlur={updateExpense}
+          onChange={handleChange}
           name="grocery" placeholder="grocery" value={props.grocery} />
 
+          <p>Insurance</p>
+        <input onBlur={updateExpense}
+          onChange={handleChange}
+          name="insurance" placeholder="insurance" value={props.insurance} />
+
+          <p>Internet</p>
+        <input onBlur={updateExpense}
+          onChange={handleChange}
+          name="internet" placeholder="internet" value={props.internet} />
+
+          <p>Phone</p>
+        <input onBlur={updateExpense}
+          onChange={handleChange}
+          name="phone" placeholder="phone" value={props.phone} />
+          <p>Total</p>
+          <input type ="Number" value= {props.rent + props.gas + props.grocery + props.insurance + props.internet + props.phone} />
         <button onClick={deleteExpense}> Delete Expenses </button>
         {/* {<button>{props.title}</button>} */}
       </div>

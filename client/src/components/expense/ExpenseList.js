@@ -24,6 +24,10 @@ const ExpenseList = (props) => {
                     rent={expense.rent}
                     gas={expense.gas} 
                     grocery={expense.grocery}
+                    insurance={expense.insurance}
+                    internet={expense.internet}
+                    phone={expense.phone}
+
                     />
                 )
             })}
