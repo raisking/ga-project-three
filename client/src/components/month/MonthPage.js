@@ -127,7 +127,7 @@ class MonthPage extends Component {
                     
                     </ul>
                     <button>Edit</button>
-                    <button onClick={this.props.handleDelete.bind(this, `/api/users/${userId}`)}>Delete</button>
+                    <button onClick={this.props.handleDelete.bind(this,`/api/users/${userId}`)}>Delete</button>
                     <button >Back</button>
                     </Container>
                     <h1>{this.state.user.userName} Monthly Income</h1>
