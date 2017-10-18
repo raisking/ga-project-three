@@ -6,7 +6,7 @@ import ExpenseList from './ExpenseList'
 // import ExpSignUp from '../expense/ExpSignUp'
 
 const Wrapper = styled.div`
-background-color:#3b68af;
+background-color: #ccc;
 color: #000;
 padding: 30px;
 width: 80%;
@@ -16,11 +16,8 @@ class ExpensePage extends Component {
         user: {
             userName: '',
             password: '',
+            address: '',
             email: '',
-            street: '',
-            city: '',
-            state: '',
-            zipcode: '',
             expenses: []
         }
     }

@@ -9,10 +9,11 @@ import ExpensePage from '../expense/ExpensePage'
 // import ExpenseList from '../expense/ExpenseList'
 
 const Wrapper = styled.div`
+border: 1px solid #000;
 background-color: #3b68af;
 color: #000;
 padding: 30px;
-width: 60%;
+width: 70%;
 margin: 0 auto;
 button{
     background: #13527d;
@@ -30,6 +31,7 @@ button{
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
   button:hover {
     background: #155882;
@@ -42,6 +44,7 @@ button{
   }
 `
 const Container = styled.div`
+border: 1px solid #000;
   background-color: #ccc;
   padding: 10px;
   ul li {
@@ -55,8 +58,11 @@ class MonthPage extends Component {
         user: {
             userName: '',
             password: '',
-            address: '',
             email: '',
+            street: '',
+            city: '',
+            state: '',
+            zipcode: '',
             months: []
         }
     }
@@ -108,16 +114,23 @@ class MonthPage extends Component {
             <Wrapper>
                 <div>
                     <Container>
-                    <h2>User Information</h2>
+                    <h2>{this.state.user.userName} Information</h2>
                     <ul>    
                         {/* displays the user information */}
-                        <li>Name: {this.state.user.userName} </li>
-                        <li>Password: {this.state.user.password} </li>
-                        <li>Address: {this.state.user.address} </li>
-                        <li>Email: {this.state.user.email} </li>
+                        <li>Name:{this.state.user.userName} </li>
+                        <li>Password: {this.state.user.password} </li>                           
+                        <li>Email: {this.state.user.email} </li>                           
+                        <li>Street: {this.state.user.street} </li>
+                        <li>City: {this.state.user.city} </li>                          
+                        <li>State: {this.state.user.state} </li>   
+                        <li>Zipcode: {this.state.user.zipcode} </li>
+                    
                     </ul>
+                    <button>Edit</button>
+                    <button onClick={this.props.handleDelete.bind(this, `/api/users/${userId}`)}>Delete</button>
+                    <button >Back</button>
                     </Container>
-                    <h1>{this.state.user.userName}'s Month Expenses</h1>
+                    <h1>{this.state.user.userName} Monthly Income</h1>
                     {/* creates new month */}
                     <button onClick={this.createNewMonth}>Add Month</button>
                     <MonthsList months={this.state.user.months}
@@ -125,7 +138,6 @@ class MonthPage extends Component {
                         deleteMonth={this.deleteMonth}
                         updateMonth={this.updateMonth}
                     />
-         
                 </div>
             </Wrapper>
         );

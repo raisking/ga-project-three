@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Wrapper= styled.div`
-background-color: #ccc;
+background-color: #3b68af;
 color: #000;
 padding: 50px;
 width: 80%;
 `
 const Container= styled.div`
+background-color: #ccc;
 border: 1px solid #000;
 color: #000;
 padding: 30px;
 width: 80%;
 `
 const ContainerA= styled.div`
+background-color: #ccc;
 margin-top: 5px;    
 border: 1px solid #000; 
 color: #000;
@@ -33,6 +35,10 @@ class LogInPage extends Component {
       const res = await axios.get('/api/users')
       this.setState({users : res.data})
     }
+
+
+
+
     render() {
         return (         
             <div>       
@@ -46,7 +52,7 @@ class LogInPage extends Component {
                         {user.userName}</Link>)
                     })}
                     </Container>
-                
+        
                 </div>
                 <div>
                 <ContainerA>
@@ -56,6 +62,7 @@ class LogInPage extends Component {
                         {user.userName}</Link>)
                     })}
                     </ContainerA>
+                   
                 </div>
                 </Wrapper>
         

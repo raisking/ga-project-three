@@ -7,6 +7,7 @@ mongoose.Promise = global.Promise
 const { User, Month, Expense } = require('./schema')
 
 const expense = new Expense({
+    date: 'January 2017',
     rent: 1000,
     gas: 400,
     grocery: 400,
@@ -17,20 +18,23 @@ const expense = new Expense({
 })
 
 const january = new Month({
-    title: 'January Expenses',
-    description: 'This is January Expenses'
+    date: 'January 2017',
+    salary: 5000,
+    rental: 1000,
+    investment: 3000,
+    total:''
 })
-const feb = new Month({
-    title: "Feb Expenses",
-    description: "This is Feb Expenses"
-})
+
 
 const user = new User({
     userName: 'Aaron Eckhart',
     password: 'iamjohn',
-    address: 'Marietta',
     email: 'john@gmail.com',
-    months: [january, feb],
+    street: '232 Cobb Parkway',
+    city: 'Marietta',
+    state: 'GA',
+    zipcode: 30080,
+    months: [january],
     expenses: [expense]
 })
 

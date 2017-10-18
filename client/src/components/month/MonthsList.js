@@ -20,8 +20,11 @@ const MonthsList = (props) => {
                     handleChange = {props.handleChange}
                     updateMonth = {props.updateMonth} 
                     deleteMonth = {props.deleteMonth}
-                    title={month.title} 
-                    description ={month.description} />
+                    date={month.date}
+                    salary={month.salary} 
+                    rental={month.rental} 
+                    investment={month.investment} 
+                    />
                 )
             })}
             </MonthsListStyles>

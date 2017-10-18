@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
 
 const expenseSchema = mongoose.Schema({
+    date:{
+        type: String,
+        required: false,
+        default: 'New Month'
+    },
     rent: {
         type: Number,
         required: false
@@ -28,20 +33,35 @@ const expenseSchema = mongoose.Schema({
 
 })
 const monthSchema = mongoose.Schema({
-    title: {
+    date:{
         type: String,
+        required: false,
         default: 'New Month'
     },
-    description: {
-        type: String,
-        default: 'New Month'
+    salary: {
+        type: Number,
+        required: false
+    },
+    rental: {
+        type: Number,
+        required: false
+    },
+    investment: {
+        type: Number,
+        required: false
+    },
+    total: {
+        type: Number,
     }
 })
 const userSchema = mongoose.Schema({
     userName: String,
     password: String, //for mook log-in 
-    address: String,
     email: String,
+    street: String,
+    city: String,
+    state: String,
+    zipcode: Number,
     months: [monthSchema],
     expenses: [expenseSchema]
 })

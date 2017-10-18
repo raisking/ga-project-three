@@ -20,7 +20,6 @@ const ExpenseList = (props) => {
                     handleChange = {props.handleChange}
                     updateExpense = {props.updateExpense} 
                     deleteExpense = {props.deleteExpense}
-                    date ={expense.date}
                     rent={expense.rent}
                     gas={expense.gas} 
                     grocery={expense.grocery}

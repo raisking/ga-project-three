@@ -22,6 +22,7 @@ router.patch('/:id', async (req, res) => {
     const updateExpense = req.body.expense
     const user = await User.findById(req.params.userId)
     const expense = user.expenses.id(req.params.id)
+    expense.date=updateExpense.date
     expense.rent= updateExpense.rent
     expense.gas = updateExpense.gas
     expense.grocery= updateExpense.grocery

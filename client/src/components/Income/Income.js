@@ -3,20 +3,20 @@ import React from 'react'
 import styled from 'styled-components'
 
 const IdeaStyles = styled.div`
-    background-color: #ccc;
-    border: 1px solid #000;
     height: auto;
     width: 300px;
     margin: 20px;
+    border-radius: 10px;
     padding: 5px;
     input {
       font-weight: none;
     }
     input, textarea {
       display: block;
-      font-size: 1em;
+      font-size: 1.2rem;
       margin: 0;
-      background-color: #fff;
+      border: 1px solid #000;
+      background-color: #ccc;
       width: 100px;
       margin: 5px;
     }
@@ -24,26 +24,9 @@ const IdeaStyles = styled.div`
       width: 95%;
       height: 70%
     }
-    hr{
-      border-top: 1px solid #000;
 
-    }
-  
   `
-  const InputArea = styled.div`
-  input {
-    display: block;
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: 0;
-    border: none;
-    background-color: #ccc;
-    width: 200px;
-    height: 20px;
-    margin: 5px;
 
-  }
-  `
   
 const Expense = (props) => {
 
@@ -60,12 +43,6 @@ const Expense = (props) => {
   return (
     <IdeaStyles>
       <div>
-      <InputArea>
-      <input onBlur={updateExpense}
-      onChange={handleChange}
-      name="date" placeholder="date" value={props.date} />
-        <hr/>
-        </InputArea>
         <p>Rent</p>
         <input onBlur={updateExpense}
           onChange={handleChange}

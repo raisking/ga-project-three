@@ -19,8 +19,11 @@ router.patch('/:id', async (req, res) => {
     const updateMonth = req.body.month
     const user = await User.findById(req.params.userId)
     const month = user.months.id(req.params.id)
-    month.title = updateMonth.title
-    month.description = updateMonth.description
+    month.date = updateMonth.date
+    month.salary =    updateMonth.salary
+    month.rental = updateMonth.rental
+    month.investment = updateMonth.investment
+    month.total = updateMonth.total
     const saved = await user.save()
     res.json(saved)
 })
