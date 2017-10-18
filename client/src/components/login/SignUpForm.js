@@ -78,7 +78,7 @@ class SignUpForm extends Component {
                         <div>
                             <input
                                 onChange={this.handleChange} name="userName"
-                                type="text" value={this.state.newUser.userName}
+                                type="text" placeholder="username" value={this.state.newUser.userName}
                             />
                         </div>
                         <div>
@@ -87,15 +87,7 @@ class SignUpForm extends Component {
                         <div>
                             <input onChange={this.handleChange}
                                 value={this.state.newUser.password}
-                                name="password" type="text" />
-                        </div>
-                        <div>
-                            <label htmlFor="address">Address</label>
-                        </div>
-                        <div>
-                            <input onChange={this.handleChange}
-                                value={this.state.newUser.address}
-                                name="address" type="text" />
+                                name="password" placeholder="password" type="text" />
                         </div>
                         <div>
                             <label htmlFor="email">Email</label>
@@ -103,7 +95,39 @@ class SignUpForm extends Component {
                         <div>
                             <input onChange={this.handleChange}
                                 value={this.state.newUser.email}
-                                name="email" type="text" />
+                                name="email" placeholder="email" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="street">Street</label>
+                        </div>
+                        <div>
+                            <input onChange={this.handleChange}
+                                value={this.state.newUser.street}
+                                name="street" placeholder="street" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="city">City</label>
+                        </div>
+                        <div>
+                            <input onChange={this.handleChange}
+                                value={this.state.newUser.city}
+                                name="city" placeholder="city" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="state">State</label>
+                        </div>
+                        <div>
+                            <input onChange={this.handleChange}
+                                value={this.state.newUser.state}
+                                name="state" placeholder="state" type="text" />
+                        </div>
+                        <div>
+                            <label htmlFor="zipcode">Zipcode</label>
+                        </div>
+                        <div>
+                            <input onChange={this.handleChange}
+                                value={this.state.newUser.zipcode}
+                                name="zipcode" placeholder="zipcode" type="text" />
                         </div>
                         <button>Create New User</button>
                     </form>
