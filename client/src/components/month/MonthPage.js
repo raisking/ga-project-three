@@ -14,13 +14,38 @@ color: #000;
 padding: 30px;
 width: 80%;
 button{
-    background-color: yellow;
-    height: 40px;
-    border: 1px solid #000;
-    padding:5px;
-    margin: 5px;
-    font-size: .8em;
-    border-radius: 5px;
+    background: #13527d;
+    background-image: -webkit-linear-gradient(top, #13527d, #2980b9);
+    background-image: -moz-linear-gradient(top, #13527d, #2980b9);
+    background-image: -ms-linear-gradient(top, #13527d, #2980b9);
+    background-image: -o-linear-gradient(top, #13527d, #2980b9);
+    background-image: linear-gradient(to bottom, #13527d, #2980b9);
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  button:hover {
+    background: #155882;
+    background-image: -webkit-linear-gradient(top, #155882, #3498db);
+    background-image: -moz-linear-gradient(top, #155882, #3498db);
+    background-image: -ms-linear-gradient(top, #155882, #3498db);
+    background-image: -o-linear-gradient(top, #155882, #3498db);
+    background-image: linear-gradient(to bottom, #155882, #3498db);
+    text-decoration: none;
+  }
+`
+const Container = styled.div`
+  background-color: #ccc;
+  padding: 10px;
+  ul li {
+      list-style: none;
+      padding: 5px;
   }
 `
 
@@ -81,14 +106,17 @@ class MonthPage extends Component {
         return (
             <Wrapper>
                 <div>
-                    <h2>User's Information Page</h2>
+                    <Container>
+                    <h2>User Information</h2>
                     <ul>
+                     
                         {/* displays the user information */}
                         <li>Name: {this.state.user.userName} </li>
                         <li>Password: {this.state.user.password} </li>
                         <li>Address: {this.state.user.address} </li>
                         <li>Email: {this.state.user.email} </li>
                     </ul>
+                    </Container>
                     <h1>{this.state.user.userName}'s Month Expenses</h1>
                     {/* creates new month */}
                     <button onClick={this.createNewMonth}>Add Month</button>

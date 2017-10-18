@@ -12,41 +12,58 @@ border: 1px solid #fff;
     justify-content: center;
    background-color: #fff;
    height: 700px; 
-
+   button{
+    background: #13527d;
+    background-image: -webkit-linear-gradient(top, #13527d, #2980b9);
+    background-image: -moz-linear-gradient(top, #13527d, #2980b9);
+    background-image: -ms-linear-gradient(top, #13527d, #2980b9);
+    background-image: -o-linear-gradient(top, #13527d, #2980b9);
+    background-image: linear-gradient(to bottom, #13527d, #2980b9);
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  button:hover {
+    background: #155882;
+    background-image: -webkit-linear-gradient(top, #155882, #3498db);
+    background-image: -moz-linear-gradient(top, #155882, #3498db);
+    background-image: -ms-linear-gradient(top, #155882, #3498db);
+    background-image: -o-linear-gradient(top, #155882, #3498db);
+    background-image: linear-gradient(to bottom, #155882, #3498db);
+    text-decoration: none;
+  }
 `
 const Items = styled.div`
-border: 1px solid #fff;
-  background-color: #ccc;
   text-decoration: none;
   display: inline-block;
   padding: 10px;
   margin: 20px;
-  width: 60px;
   text-align: center;
   border-radius: 10px;
   font-weight: bold;
 `
 const ItemsA = styled.div`
-border: 1px solid #fff;
-background-color: #ccc;
 text-decoration: none;
 display: inline-block;
 padding: 10px;
 margin: 20px;
-width: 60px;
 text-align: center;
 border-radius: 10px;
 font-weight: bold;
 
 `
 const ItemsB = styled.div`
-border: 1px solid #fff;
-background-color: #ccc;
 text-decoration: none;
 display: inline-block;
 padding: 10px;
 margin: 20px;
-width: 60px;
+width: 70px;
 text-align: center;
 border-radius: 10px;
 font-weight: bold;
@@ -61,17 +78,17 @@ class App extends Component {
         <div>
           <Items>
           <div>
-            <Link to="/">Home</Link>
+            <Link to="/"><button>Sign Up</button></Link>
           </div>
           </Items>
           <ItemsA>
           <div>
-            <Link to="/login">Login</Link>
+            <Link to="/login"><button>Information</button></Link>
           </div>
           </ItemsA>
           <ItemsB>
           <div>
-            <Link to="/">User</Link>
+            <Link to="/"><button>User</button></Link>
           </div>
           </ItemsB>
           <Switch>

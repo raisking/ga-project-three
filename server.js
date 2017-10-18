@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const UsersController = require('./routes/UsersController')
 const MonthController = require('./routes/MonthController')
-
+const ExpenseController = require('./routes/ExpenseController')
 mongoose.Promise = global.Promise
 // Create a new app using express
 const app = express()
@@ -29,7 +29,7 @@ app.use(bodyParser.json())
 
 app.use('/api/users', UsersController)
 app.use('/api/users/:userId/months', MonthController)
-
+app.use('/api/users/:userId/expenses', ExpenseController)
 
 //Create a index route that renders your built React app
 app.get('/', (req, res) => {

@@ -3,27 +3,27 @@ const mongoose = require('mongoose')
 const expenseSchema = mongoose.Schema({
     rent: {
         type: Number,
-        required: true
+        required: false
     },
     gas: {
         type: Number,
-        required: true
+        required: false
     },
     grocery: {
         type: Number,
-        required: true
+        required: false
     },
     insurance: {
         type: Number,
-        required: true
+        required: false
     },
     internet: {
         type: Number,
-        required: true
+        required: false
     },
     phone: {
         type: Number,
-        required: true
+        required: false
     }
 
 })

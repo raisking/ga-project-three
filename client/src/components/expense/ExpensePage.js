@@ -5,13 +5,12 @@ import ExpenseList from './ExpenseList'
 // import SignUpForm from '../login/SignUpForm'
 // import ExpSignUp from '../expense/ExpSignUp'
 
-const Wrapper= styled.div`
+const Wrapper = styled.div`
 background-color: #ccc;
 color: #000;
 padding: 30px;
 width: 80%;
 `
-
 class ExpensePage extends Component {
     state = {
         user: {
@@ -25,7 +24,7 @@ class ExpensePage extends Component {
     //get info about the usr when it initially mounts
     async componentWillMount() {
         console.log(this.props)
-        const {userId} = this.props.match.params
+        const { userId } = this.props.match.params
         const res = await axios.get(`/api/users/${userId}`)
         console.log(res)
         this.setState({ user: res.data })
@@ -69,17 +68,15 @@ class ExpensePage extends Component {
     render() {
         return (
             <Wrapper>
-            <div>
-                <h1>{this.state.user.userName}'s Expenses</h1>
-                <button onClick={this.createNewExpense}>Add Expenses
-                    </button>
-                <ExpenseList expenses={this.state.user.expenses}
-                    handleChange={this.handleChange}
-                    deleteExpense={this.deleteExpense}
-                    updateExpense={this.updateExpense}
-                />  
-              
-            </div>
+                <div>
+                    <h1>{this.state.user.userName}'s Expenses</h1>
+                    <button onClick={this.createNewExpense}>Add Expenses</button>
+                    <ExpenseList expenses={this.state.user.expenses}
+                        handleChange={this.handleChange}
+                        deleteExpense={this.deleteExpense}
+                        updateExpense={this.updateExpense}
+                    />
+                </div>
             </Wrapper>
         );
     }

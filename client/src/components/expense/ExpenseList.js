@@ -7,7 +7,6 @@ width: 95%;
 margin: 0 auto;
 display: flex;
 flex-wrap: wrap;
-background-color: red;
 `
 // This is a simple stateless component that just loops through an array of props and renders another component
 // Remember to pass props in as an argument when you use stateless functions.
