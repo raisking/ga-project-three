@@ -1,4 +1,5 @@
 # ga-project-three
+Application that keeps track of your incomes and expenses. 
 
 https://trello.com/b/Bkh50Frp/ga-project-three
 
