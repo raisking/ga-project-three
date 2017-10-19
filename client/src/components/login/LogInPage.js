@@ -62,14 +62,14 @@ class LogInPage extends Component {
         
                 </div>
                 <div>
-                <ContainerA>
-                    <p>User Expenses</p>
-                    <hr/>
-                    {this.state.users.map(user => {
+                {/* <ContainerA> */}
+                    {/* <p>User Expenses</p> */}
+                    {/* <hr/> */}
+                    {/* {this.state.users.map(user => {
                         return (<Link key={user._id} to={`/expense/${user._id}`}>
                         {user.userName}<br/></Link>)
-                    })}
-                    </ContainerA>
+                    })} */}
+                    {/* </ContainerA> */}
                    
                 </div>
                 </Wrapper>

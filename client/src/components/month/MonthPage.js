@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
 import MonthsList from './MonthsList'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 // import SignUpForm from '../login/SignUpForm'
 // import ExpSignUp from '../expense/ExpSignUp'
 import Expense from '../expense/Expense'
@@ -13,7 +14,7 @@ border: 1px solid #000;
 background-color: #3b68af;
 color: #000;
 padding: 30px;
-width: 70%;
+width: 100%;
 margin: 0 auto;
 button{
     background-image: linear-gradient(to bottom, #13527d, #2980b9);
@@ -47,6 +48,7 @@ class MonthPage extends Component {
     state = {
         user: {
             userName: '',
+            _id: '',
             password: '',
             email: '',
             street: '',
@@ -116,11 +118,14 @@ class MonthPage extends Component {
                         <li>Zipcode: {this.state.user.zipcode} </li>
                     
                     </ul>
-         
-                    <button>Delete</button>
-
+    
+           
                     </Container>
                     <h1>{this.state.user.userName} Monthly Income</h1>
+                    <div>
+                        <Link to={`/expense/${this.state.user._id}`}>
+                        <button>Expense</button></Link>
+                     </div>
                     {/* creates new month */}
                     <button onClick={this.createNewMonth}>Add Month</button>
                     <MonthsList months={this.state.user.months}
@@ -128,6 +133,12 @@ class MonthPage extends Component {
                         deleteMonth={this.deleteMonth}
                         updateMonth={this.updateMonth}
                     />
+                <Router>
+                    <Switch>
+
+                    <Route exact path="/expense/:userId" component={ExpensePage}/>
+                    </Switch>
+                </Router>
                 </div>
             </Wrapper>
         );
