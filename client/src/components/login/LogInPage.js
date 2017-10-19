@@ -61,17 +61,6 @@ class LogInPage extends Component {
                     </Container>
         
                 </div>
-                <div>
-                {/* <ContainerA> */}
-                    {/* <p>User Expenses</p> */}
-                    {/* <hr/> */}
-                    {/* {this.state.users.map(user => {
-                        return (<Link key={user._id} to={`/expense/${user._id}`}>
-                        {user.userName}<br/></Link>)
-                    })} */}
-                    {/* </ContainerA> */}
-                   
-                </div>
                 </Wrapper>
         
             </div>

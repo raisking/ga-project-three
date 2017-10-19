@@ -10,8 +10,8 @@ const Wrapper= styled.div`
   border: 1px solid #fff;
   display: flex;
   justify-content: center;
-   background-color: #fff;
-   height: 700px; 
+   background-color: #ccc;
+   height: 0; 
   
    button{
     background: #13527d;
