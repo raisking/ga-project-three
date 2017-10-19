@@ -27,13 +27,13 @@ const january = new Month({
 
 
 const user = new User({
-    userName: 'Aaron Eckhart',
-    password: 'iamjohn',
+    userName: 'Barry Pepper',
+    password: 'iamberry',
     email: 'john@gmail.com',
     street: '232 Cobb Parkway',
-    city: 'Marietta',
+    city: 'Atlanta',
     state: 'GA',
-    zipcode: 30080,
+    zipcode: 30000,
     months: [january],
     expenses: [expense]
 })
