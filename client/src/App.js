@@ -10,15 +10,19 @@ const Wrapper= styled.div`
   border: 1px solid #fff;
   display: flex;
   justify-content: center;
-   background-color: #ccc;
-   height: 0; 
+   background-color: #0099cc;
+   height: 80px;  
+   margin-bottom: 10  0px;
+a{
+  text-decoration: none;
+  font-size: 1.1em;
+}
+a:hover{
+  font-weight: bolder;
+  color: red;
+}
   
    button{
-    background: #13527d;
-    background-image: -webkit-linear-gradient(top, #13527d, #2980b9);
-    background-image: -moz-linear-gradient(top, #13527d, #2980b9);
-    background-image: -ms-linear-gradient(top, #13527d, #2980b9);
-    background-image: -o-linear-gradient(top, #13527d, #2980b9);
     background-image: linear-gradient(to bottom, #13527d, #2980b9);
     -webkit-border-radius: 6;
     -moz-border-radius: 6;
@@ -31,25 +35,21 @@ const Wrapper= styled.div`
     margin-top: 10px;
   }
   button:hover {
-    background: #155882;
-    background-image: -webkit-linear-gradient(top, #155882, #3498db);
-    background-image: -moz-linear-gradient(top, #155882, #3498db);
-    background-image: -ms-linear-gradient(top, #155882, #3498db);
-    background-image: -o-linear-gradient(top, #155882, #3498db);
     background-image: linear-gradient(to bottom, #155882, #3498db);
     text-decoration: none;
   }
 `
 const Items = styled.div`
+
   text-decoration: none;
   display: inline-block;
-  padding: 10px;
-  margin: 20px;
+
   text-align: center;
   border-radius: 10px;
   font-weight: bold;
 `
 const ItemsA = styled.div`
+
 text-decoration: none;
 display: inline-block;
 padding: 10px;
@@ -59,17 +59,7 @@ border-radius: 10px;
 font-weight: bold;
 
 `
-const ItemsB = styled.div`
-text-decoration: none;
-display: inline-block;
-padding: 10px;
-margin: 20px;
-width: 70px;
-text-align: center;
-border-radius: 10px;
-font-weight: bold;
 
-`
 
 class App extends Component {
   render() {
@@ -79,19 +69,15 @@ class App extends Component {
         <div>
           <Items>
           <div>
-            <Link to="/"><button>Sign Up</button></Link>
+            <Link to="/">Sign Up</Link>
           </div>
           </Items>
           <ItemsA>
           <div>
-            <Link to="/login"><button>User</button></Link>
+            <Link to="/login">User Account</Link>
           </div>
           </ItemsA>
-          <ItemsB>
-          {/* <div>
-            <Link to="/"><button>User</button></Link>
-          </div> */}
-          </ItemsB>
+       
           <Switch>
             {<Route exact path="/" component={HomePage} />}
 

@@ -16,6 +16,7 @@ color: #000;
 padding: 30px;
 width: 100%;
 margin: 0 auto;
+box-shadow: 10px 10px 5px #888888;
 button{
     background-image: linear-gradient(to bottom, #13527d, #2980b9);
     -webkit-border-radius: 6;
@@ -121,11 +122,11 @@ class MonthPage extends Component {
     
            
                     </Container>
-                    <h1>{this.state.user.userName} Monthly Income</h1>
-                    <div>
+                    <h1>{this.state.user.userName}'s Monthly Income</h1>
+                    
                         <Link to={`/expense/${this.state.user._id}`}>
                         <button>Expense</button></Link>
-                     </div>
+                     
                     {/* creates new month */}
                     <button onClick={this.createNewMonth}>Add Month</button>
                     <MonthsList months={this.state.user.months}

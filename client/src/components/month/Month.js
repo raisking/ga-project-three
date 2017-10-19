@@ -75,7 +75,7 @@ const Month = (props) => {
         {/* This page shows the data , delete button */}
         <InputArea>
           <input onBlur={updateMonth}
-            onChange={handleChange} name="date" value={props.date} />
+            onChange={handleChange} name="date" placeholder="Add Month " value={props.date} />
           <hr />
         </InputArea>
         <p>Salary:</p>

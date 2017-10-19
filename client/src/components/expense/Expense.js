@@ -64,7 +64,7 @@ const Expense = (props) => {
         <InputArea>
           <input onBlur={updateExpense}
             onChange={handleChange}
-            name="date" placeholder="date" value={props.date} />
+            name="date" placeholder="Add Month" value={props.date} />
           <hr />
         </InputArea>
         <p>Rent:</p>

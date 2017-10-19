@@ -11,6 +11,7 @@ background-color:#3b68af;
 color: #000;
 padding: 30px;
 width: 100%;
+box-shadow: 10px 10px 5px #888888;
 `
 class ExpensePage extends Component {
     state = {
@@ -74,7 +75,7 @@ class ExpensePage extends Component {
         return (
             <Wrapper>
                 <div>
-                    <h1>{this.state.user.userName}'s Expenses</h1>
+                    <h1>{this.state.user.userName}'s Monthly Expenses</h1>
                     <Link to={`/month/${this.state.user._id}`}>
                     <button>Income</button></Link>
                     <button onClick={this.createNewExpense}>Add Expenses</button>

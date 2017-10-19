@@ -3,11 +3,13 @@ import axios from 'axios'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+
 border: 1px solid #000;
 background-color: #ccc;
 color: #000;
 padding: 30px;
 width: 80%;
+    box-shadow: 10px 10px 5px #888888;
 button{
     background: #13527d;
     background-image: linear-gradient(to bottom, #13527d, #2980b9);
@@ -79,7 +81,7 @@ class SignUpForm extends Component {
                         <div>
                             <input onChange={this.handleChange}
                                 value={this.state.newUser.password}
-                                name="password" placeholder="password" type="text" />
+                                name="password" placeholder="password" type="password" />
                         </div>
                         <div>
                             <label htmlFor="email">Email</label>
@@ -97,7 +99,7 @@ class SignUpForm extends Component {
                                 value={this.state.newUser.street}
                                 name="street" placeholder="street" type="text" />
                         </div>
-                        <div>
+                        {/* <div>
                             <label htmlFor="city">City</label>
                         </div>
                         <div>
@@ -119,8 +121,8 @@ class SignUpForm extends Component {
                         <div>
                             <input onChange={this.handleChange}
                                 value={this.state.newUser.zipcode}
-                                name="zipcode" placeholder="zipcode" type="text" />
-                        </div>
+                                name="zipcode" placeholder="zipcode" type="text" /> 
+                         </div> */}
                         <button>Create New User</button>
                     </form>
 

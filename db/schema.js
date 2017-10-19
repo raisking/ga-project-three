@@ -4,7 +4,7 @@ const expenseSchema = mongoose.Schema({
     date:{
         type: String,
         required: false,
-        default: 'New Month'
+ 
     },
     rent: {
         type: Number,
@@ -36,7 +36,7 @@ const monthSchema = mongoose.Schema({
     date:{
         type: String,
         required: false,
-        default: 'New Month'
+  
     },
     salary: {
         type: Number,

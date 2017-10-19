@@ -8,6 +8,9 @@ background-color: #3b68af;
 color: #000;
 padding: 50px;
 width: 80%;
+box-shadow: 10px 10px 5px #888888;
+
+
 `
 const Container= styled.div`
 background-color: #ccc;
@@ -16,6 +19,15 @@ color: #000;
 padding: 30px;
 width: 80%;
 p{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+   
+
+}
+a:hover{
+    color: red; 
     font-weight: bold;
 }
 
@@ -30,6 +42,7 @@ width: 80%;
 
 p{
     font-weight: bold;
+   font-size: 1.2em;
 }
 `
 class LogInPage extends Component {
@@ -56,7 +69,7 @@ class LogInPage extends Component {
                         <hr/>
                     {this.state.users.map(user => {
                         return (<Link key={user._id} to={`/month/${user._id}`}>
-                        {user.userName}<br/></Link>)
+                        {user.userName}<br/><br/></Link>)
                     })}
                     </Container>
         
