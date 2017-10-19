@@ -9,28 +9,29 @@ const IdeaStyles = styled.div`
     width: 300px;
     margin: 20px;
     padding: 5px;
-    input {
-      font-weight: none;
-    }
-    input, textarea {
+    input   { 
       display: block;
       font-size: .9em;
-      margin: 0;
       background-color: #fff;
       width: 100px;
-      margin: 5px;
+      position: relative;
+      left: 80px;   
+      
     }
-    textarea{
-      width: 95%;
-      height: 70%
-    }
+   
     hr{
       border-top: 1px solid #000;
 
     }
+    p{
+      text-align: right;
+      position: relative;
+      left: -225px;
+      top: 35px;
+    }
   
   `
-  const InputArea = styled.div`
+const InputArea = styled.div`
   input {
     display: block;
     font-size: 1.3em;
@@ -44,7 +45,7 @@ const IdeaStyles = styled.div`
 
   }
   `
-  
+
 const Expense = (props) => {
 
   const deleteExpense = () => {
@@ -60,42 +61,42 @@ const Expense = (props) => {
   return (
     <IdeaStyles>
       <div>
-      <InputArea>
-      <input onBlur={updateExpense}
-      onChange={handleChange}
-      name="date" placeholder="date" value={props.date} />
-        <hr/>
+        <InputArea>
+          <input onBlur={updateExpense}
+            onChange={handleChange}
+            name="date" placeholder="date" value={props.date} />
+          <hr />
         </InputArea>
-        <p>Rent</p>
+        <p>Rent:</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="rent" placeholder="rent" value={props.rent} />
 
-        <p>Gas</p>
+        <p>Gas:</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="gas" placeholder="gas" value={props.gas} />
 
-        <p>Grocery</p>
+        <p>Grocery:</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="grocery" placeholder="grocery" value={props.grocery} />
 
-        <p>Insurance</p>
+        <p>Insurance:</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="insurance" placeholder="insurance" value={props.insurance} />
 
-        <p>Internet</p>
+        <p>Internet:</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="internet" placeholder="internet" value={props.internet} />
 
-        <p>Phone</p>
+        <p>Phone:</p>
         <input onBlur={updateExpense}
           onChange={handleChange}
           name="phone" placeholder="phone" value={props.phone} />
-        <p>Total</p>
+        <p>Total:</p>
         <input type="Number" value={parseInt(props.rent + props.gas + props.grocery + props.insurance + props.internet + props.phone)} />
         <button onClick={deleteExpense}> Delete Expenses </button>
         {/* {<button>{props.title}</button>} */}

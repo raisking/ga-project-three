@@ -2,22 +2,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
-  const IdeaStyles = styled.div`
+const IdeaStyles = styled.div`
   height: auto;
   width: 300px;
   margin: 20px;
   background-color: #ccc;
   border: 1px solid #000;
-  padding: 5px;
+
   input {
     display: block;
     font-size: .9em;
-    margin: 0;
+    margin-top: -15px;
     border: none;
     background-color: #fff;
     width: 100px;
     height: 20px;
-    margin: 5px;
+    position: relative;
+    left: 90px;
+
 
   }
   textarea{
@@ -34,14 +36,18 @@ import styled from 'styled-components'
     border-top: 1px solid #000;
 
   }
-}
-`  
+  p{
+    text-align: right;
+   position: relative;
+   top: 20px;
+   left: -215px;
+  }
+`
 const InputArea = styled.div`
 input {
   display: block;
   font-size: 1.3em;
   font-weight: bold;
-  margin: 0;
   border: none;
   background-color: #ccc;
   width: 200px;
@@ -68,27 +74,27 @@ const Month = (props) => {
       <div>
         {/* This page shows the data , delete button */}
         <InputArea>
-        <input onBlur={updateMonth}
-        onChange={handleChange} name="date" value={props.date} />
-        <hr/>
+          <input onBlur={updateMonth}
+            onChange={handleChange} name="date" value={props.date} />
+          <hr />
         </InputArea>
-        <p>Salary</p>
+        <p>Salary:</p>
         <input onBlur={updateMonth}
           onChange={handleChange} name="salary" value={props.salary} />
-       <p>Rental</p>
-        <input onBlur={updateMonth} 
-        onChange={handleChange} name="rental" value={props.rental} />
-        <p>Investment</p>
-        <input onBlur={updateMonth} 
-        onChange={handleChange} name="investment" value={props.investment} />
+        <p>Rental:</p>
+        <input onBlur={updateMonth}
+          onChange={handleChange} name="rental" value={props.rental} />
+        <p>Investment:</p>
+        <input onBlur={updateMonth}
+          onChange={handleChange} name="investment" value={props.investment} />
 
-        <p>Total</p>
+        <p>Total:</p>
         <input type="Number" value={parseInt(props.salary + props.rental + props.investment)} />
         <button onClick={deleteMonth}> Delete Month </button>
-    
+
       </div>
     </IdeaStyles>
-  
+
   )
 }
 

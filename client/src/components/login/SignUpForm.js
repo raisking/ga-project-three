@@ -10,10 +10,6 @@ padding: 30px;
 width: 80%;
 button{
     background: #13527d;
-    background-image: -webkit-linear-gradient(top, #13527d, #2980b9);
-    background-image: -moz-linear-gradient(top, #13527d, #2980b9);
-    background-image: -ms-linear-gradient(top, #13527d, #2980b9);
-    background-image: -o-linear-gradient(top, #13527d, #2980b9);
     background-image: linear-gradient(to bottom, #13527d, #2980b9);
     -webkit-border-radius: 6;
     -moz-border-radius: 6;
@@ -25,12 +21,7 @@ button{
     text-decoration: none;
     margin-top: 10px;
   }
-  button:hover {
-    background: #155882;
-    background-image: -webkit-linear-gradient(top, #155882, #3498db);
-    background-image: -moz-linear-gradient(top, #155882, #3498db);
-    background-image: -ms-linear-gradient(top, #155882, #3498db);
-    background-image: -o-linear-gradient(top, #155882, #3498db);
+  button:hover { 
     background-image: linear-gradient(to bottom, #155882, #3498db);
     text-decoration: none;
   }
@@ -39,6 +30,7 @@ button{
       height: 20px;
       margin-bottom: 12px;
   }
+
 `
 
 class SignUpForm extends Component {
