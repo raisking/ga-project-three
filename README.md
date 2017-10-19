@@ -1,4 +1,5 @@
-# ga-project-three
+Project 3
+================
 Application that keeps record of your incomes and expenses. 
 
 Trello Board:
