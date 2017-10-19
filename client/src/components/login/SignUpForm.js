@@ -99,7 +99,7 @@ class SignUpForm extends Component {
                                 value={this.state.newUser.street}
                                 name="street" placeholder="street" type="text" />
                         </div>
-                        {/* <div>
+                        <div>
                             <label htmlFor="city">City</label>
                         </div>
                         <div>
@@ -121,8 +121,8 @@ class SignUpForm extends Component {
                         <div>
                             <input onChange={this.handleChange}
                                 value={this.state.newUser.zipcode}
-                                name="zipcode" placeholder="zipcode" type="text" /> 
-                         </div> */}
+                                name="zipcode" placeholder="zipcode" type="text" />
+                        </div>
                         <button>Create New User</button>
                     </form>
 

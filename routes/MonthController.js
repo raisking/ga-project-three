@@ -1,6 +1,6 @@
 const express = require('express')
-const router = express.Router({mergeParams: true})
-const {User, Month} = require('../db/schema')
+const router = express.Router({ mergeParams: true })
+const { User, Month } = require('../db/schema')
 
 router.post('/', async (req, res) => {
     //create an empty month model
@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
     user.months.push(newMonth)
     const saved = await user.save()
     res.json(saved)
-    
+
 })
 router.patch('/:id', async (req, res) => {
     console.log(req.body)
@@ -20,7 +20,7 @@ router.patch('/:id', async (req, res) => {
     const user = await User.findById(req.params.userId)
     const month = user.months.id(req.params.id)
     month.date = updateMonth.date
-    month.salary =    updateMonth.salary
+    month.salary = updateMonth.salary
     month.rental = updateMonth.rental
     month.investment = updateMonth.investment
     month.total = updateMonth.total
@@ -28,7 +28,7 @@ router.patch('/:id', async (req, res) => {
     res.json(saved)
 })
 
-router.delete('/:id', async(req, res) => {
+router.delete('/:id', async (req, res) => {
     const user = await User.findById(req.params.userId)
     user.months.id(req.params.id).remove()
     const saved = await user.save()

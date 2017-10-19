@@ -107,26 +107,26 @@ class MonthPage extends Component {
             <Wrapper>
                 <div>
                     <Container>
-                    <h2>{this.state.user.userName}'s' Information</h2>
-                    <ul>    
-                        {/* displays the user information */}
-                        <li>Name:{this.state.user.userName} </li>
-                        <li>Password: {this.state.user.password} </li>                           
-                        <li>Email: {this.state.user.email} </li>                           
-                        <li>Street: {this.state.user.street} </li>
-                        <li>City: {this.state.user.city} </li>                          
-                        <li>State: {this.state.user.state} </li>   
-                        <li>Zipcode: {this.state.user.zipcode} </li>
-                    
-                    </ul>
-    
-           
+                        <h2>{this.state.user.userName}'s' Information</h2>
+                        <ul>
+                            {/* displays the user information */}
+                            <li>Name:{this.state.user.userName} </li>
+                            <li>Password: {this.state.user.password} </li>
+                            <li>Email: {this.state.user.email} </li>
+                            <li>Street: {this.state.user.street} </li>
+                            <li>City: {this.state.user.city} </li>
+                            <li>State: {this.state.user.state} </li>
+                            <li>Zipcode: {this.state.user.zipcode} </li>
+
+                        </ul>
+
+
                     </Container>
                     <h1>{this.state.user.userName}'s Monthly Income</h1>
-                    
-                        <Link to={`/expense/${this.state.user._id}`}>
+
+                    <Link to={`/expense/${this.state.user._id}`}>
                         <button>Expense</button></Link>
-                     
+
                     {/* creates new month */}
                     <button onClick={this.createNewMonth}>Add Month</button>
                     <MonthsList months={this.state.user.months}
@@ -134,12 +134,12 @@ class MonthPage extends Component {
                         deleteMonth={this.deleteMonth}
                         updateMonth={this.updateMonth}
                     />
-                <Router>
-                    <Switch>
+                    <Router>
+                        <Switch>
 
-                    <Route exact path="/expense/:userId" component={ExpensePage}/>
-                    </Switch>
-                </Router>
+                            <Route exact path="/expense/:userId" component={ExpensePage} />
+                        </Switch>
+                    </Router>
                 </div>
             </Wrapper>
         );

@@ -12,22 +12,22 @@ flex-wrap: wrap;
 // This is a simple stateless component that just loops through an array of props and renders another component
 // Remember to pass props in as an argument when you use stateless functions.
 const MonthsList = (props) => {
-    return(
+    return (
         <MonthsListStyles>
             {props.months.map((month) => {
-                return(
-                    <Month key ={month._id} _id={month._id}
-                    handleChange = {props.handleChange}
-                    updateMonth = {props.updateMonth} 
-                    deleteMonth = {props.deleteMonth}
-                    date={month.date}
-                    salary={month.salary} 
-                    rental={month.rental} 
-                    investment={month.investment} 
+                return (
+                    <Month key={month._id} _id={month._id}
+                        handleChange={props.handleChange}
+                        updateMonth={props.updateMonth}
+                        deleteMonth={props.deleteMonth}
+                        date={month.date}
+                        salary={month.salary}
+                        rental={month.rental}
+                        investment={month.investment}
                     />
                 )
             })}
-            </MonthsListStyles>
+        </MonthsListStyles>
     )
 }
 

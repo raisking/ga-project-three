@@ -12,26 +12,26 @@ flex-wrap: wrap;
 // Remember to pass props in as an argument when you use stateless functions.
 const ExpenseList = (props) => {
     console.log(props)
-    return(
-        <ExpenseListStyles>  
+    return (
+        <ExpenseListStyles>
             {props.expenses.map((expense) => {
-                return(
-                    <Expense key ={expense._id} _id={expense._id}
-                    handleChange = {props.handleChange}
-                    updateExpense = {props.updateExpense} 
-                    deleteExpense = {props.deleteExpense}
-                    date ={expense.date}
-                    rent={expense.rent}
-                    gas={expense.gas} 
-                    grocery={expense.grocery}
-                    insurance={expense.insurance}
-                    internet={expense.internet}
-                    phone={expense.phone}
+                return (
+                    <Expense key={expense._id} _id={expense._id}
+                        handleChange={props.handleChange}
+                        updateExpense={props.updateExpense}
+                        deleteExpense={props.deleteExpense}
+                        date={expense.date}
+                        rent={expense.rent}
+                        gas={expense.gas}
+                        grocery={expense.grocery}
+                        insurance={expense.insurance}
+                        internet={expense.internet}
+                        phone={expense.phone}
 
                     />
                 )
             })}
-            </ExpenseListStyles>
+        </ExpenseListStyles>
     )
 }
 

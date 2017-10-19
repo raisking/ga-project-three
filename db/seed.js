@@ -22,7 +22,7 @@ const january = new Month({
     salary: 5000,
     rental: 1000,
     investment: 3000,
-    total:''
+    total: ''
 })
 
 

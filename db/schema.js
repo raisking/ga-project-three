@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
 const expenseSchema = mongoose.Schema({
-    date:{
+    date: {
         type: String,
         required: false,
- 
+
     },
     rent: {
         type: Number,
@@ -33,10 +33,10 @@ const expenseSchema = mongoose.Schema({
 
 })
 const monthSchema = mongoose.Schema({
-    date:{
+    date: {
         type: String,
         required: false,
-  
+
     },
     salary: {
         type: Number,

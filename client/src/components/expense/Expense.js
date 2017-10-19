@@ -99,7 +99,6 @@ const Expense = (props) => {
         <p>Total:</p>
         <input type="Number" value={parseInt(props.rent + props.gas + props.grocery + props.insurance + props.internet + props.phone)} />
         <button onClick={deleteExpense}> Delete Expenses </button>
-        {/* {<button>{props.title}</button>} */}
       </div>
     </IdeaStyles>
 
