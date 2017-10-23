@@ -3,8 +3,6 @@ import axios from 'axios'
 import styled from 'styled-components'
 import ExpenseList from './ExpenseList'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-// import SignUpForm from '../login/SignUpForm'
-// import ExpSignUp from '../expense/ExpSignUp'
 
 const Wrapper = styled.div`
 background-color:#3b68af;
@@ -77,7 +75,7 @@ class ExpensePage extends Component {
                 <div>
                     <h1>{this.state.user.userName}'s Monthly Expenses</h1>
                     <Link to={`/month/${this.state.user._id}`}>
-                    <button>Income</button></Link>
+                        <button>Income</button></Link>
                     <button onClick={this.createNewExpense}>Add Expenses</button>
                     <ExpenseList expenses={this.state.user.expenses}
                         handleChange={this.handleChange}

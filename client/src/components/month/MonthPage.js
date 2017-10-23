@@ -3,11 +3,9 @@ import axios from 'axios'
 import styled from 'styled-components'
 import MonthsList from './MonthsList'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-// import SignUpForm from '../login/SignUpForm'
-// import ExpSignUp from '../expense/ExpSignUp'
 import Expense from '../expense/Expense'
 import ExpensePage from '../expense/ExpensePage'
-// import ExpenseList from '../expense/ExpenseList'
+
 
 const Wrapper = styled.div`
 border: 1px solid #000;
