@@ -88,6 +88,7 @@ const Month = (props) => {
         <input onBlur={updateMonth}
           onChange={handleChange} name="investment" value={props.investment} />
 
+
         <p>Total:</p>
         <input type="Number" value={parseInt(props.salary + props.rental + props.investment)} />
         <button onClick={deleteMonth}> Delete Month </button>

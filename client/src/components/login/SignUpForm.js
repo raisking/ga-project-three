@@ -1,39 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
+import { Redirect } from 'react-router-dom'
+import './SignUpForm.css'
 
-const Wrapper = styled.div`
-
-border: 1px solid #000;
-background-color: #ccc;
-color: #000;
-padding: 30px;
-width: 80%;
-    box-shadow: 10px 10px 5px #888888;
-button{
-    background: #13527d;
-    background-image: linear-gradient(to bottom, #13527d, #2980b9);
-    -webkit-border-radius: 6;
-    -moz-border-radius: 6;
-    border-radius: 6px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 12px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    margin-top: 10px;
-  }
-  button:hover { 
-    background-image: linear-gradient(to bottom, #155882, #3498db);
-    text-decoration: none;
-  }
-  input{
-      width: 250px;
-      height: 20px;
-      margin-bottom: 12px;
-  }
-
-`
 
 class SignUpForm extends Component {
     state = {
@@ -41,7 +11,8 @@ class SignUpForm extends Component {
             userName: '',
             password: '',
             address: '',
-            email: ''
+            email: '',
+            redirectToUserProfile: false
         }
     }
 
@@ -58,64 +29,62 @@ class SignUpForm extends Component {
             'user': this.state.newUser
         })
         console.log(res.data)
+        this.setState({redirectToUserProfile: true})
     }
 
     render() {
+        if(this.state.redirectToUserProfile){
+            return<Redirect to={'/login'}/>
+        }
         return (
-            <Wrapper>
-                <div>
+       
+                <div className="mainContainer">
                     <h2>Create a new user account</h2>
                     <form onSubmit={this.handleSubmit}>
-                        <div>
+                        <div className="labelItem">
                             <label htmlFor="userName"> User Name</label>
                         </div>
                         <div>
-                            <input
-                                onChange={this.handleChange} name="userName"
+                            <input onChange={this.handleChange} name="userName"
                                 type="text" placeholder="username" value={this.state.newUser.userName}
                             />
                         </div>
-                        <div>
+                        <div className="labelItem">
                             <label htmlFor="password">Password</label>
                         </div>
                         <div>
-                            <input onChange={this.handleChange}
-                                value={this.state.newUser.password}
+                            <input onChange={this.handleChange} value={this.state.newUser.password}
                                 name="password" placeholder="password" type="password" />
                         </div>
-                        <div>
+                        <div className="labelItem">
                             <label htmlFor="email">Email</label>
                         </div>
                         <div>
-                            <input onChange={this.handleChange}
-                                value={this.state.newUser.email}
+                            <input onChange={this.handleChange} value={this.state.newUser.email}
                                 name="email" placeholder="email" type="text" />
                         </div>
-                        <div>
+                        <div className="labelItem">
                             <label htmlFor="street">Street</label>
                         </div>
                         <div>
-                            <input onChange={this.handleChange}
-                                value={this.state.newUser.street}
+                            <input onChange={this.handleChange} value={this.state.newUser.street}
                                 name="street" placeholder="street" type="text" />
                         </div>
-                        <div>
+                        <div className="labelItem">
                             <label htmlFor="city">City</label>
                         </div>
                         <div>
-                            <input onChange={this.handleChange}
-                                value={this.state.newUser.city}
+                            <input onChange={this.handleChange} value={this.state.newUser.city}
                                 name="city" placeholder="city" type="text" />
                         </div>
-                        <div>
+                        <div className="labelItem">
                             <label htmlFor="state">State</label>
                         </div>
                         <div>
-                            <input onChange={this.handleChange}
-                                value={this.state.newUser.state}
+                            <input onChange={this.handleChange} value={this.state.newUser.state}
                                 name="state" placeholder="state" type="text" />
                         </div>
-                        <div>
+                        <div className="labelItem">
                             <label htmlFor="zipcode">Zipcode</label>
                         </div>
                         <div>
@@ -124,10 +93,12 @@ class SignUpForm extends Component {
                                 name="zipcode" placeholder="zipcode" type="text" />
                         </div>
                         <button>Create New User</button>
+                  
+
                     </form>
 
                 </div>
-            </Wrapper>
+        
         );
     }
 }

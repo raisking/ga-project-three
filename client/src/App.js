@@ -80,7 +80,6 @@ class App extends Component {
        
           <Switch>
             {<Route exact path="/" component={HomePage} />}
-
             {/* <Route exact path="/" component={ExpenseHome} /> */}
             <Route exact path="/login" component={LogInPage}/>
             <Route exact path ="/month/:userId" component={MonthPage} />

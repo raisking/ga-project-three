@@ -57,6 +57,7 @@ class MonthPage extends Component {
             months: []
         }
     }
+
     //get info about the usr when it initially mounts
     async componentWillMount() {
         const { userId } = this.props.match.params
@@ -88,6 +89,7 @@ class MonthPage extends Component {
         month[attribute] = event.target.value
         this.setState({ user: clonedUser })
     }
+    
     //triggger patch when leaving an input field
     updateMonth = async (monthId) => {
         const { userId } = this.props.match.params

@@ -15,8 +15,7 @@ const IdeaStyles = styled.div`
       background-color: #fff;
       width: 100px;
       position: relative;
-      left: 80px;   
-      
+      left: 80px;     
     }
    
     hr{

@@ -48,7 +48,7 @@ class ExpensePage extends Component {
         const res = await axios.delete(`/api/users/${userId}/expenses/${id}`)
         this.setState({ user: res.data })
     }
-
+    
     handleChange = (event, expenseId) => {
         const attribute = event.target.name
         const clonedUser = { ...this.state.user }
@@ -57,6 +57,7 @@ class ExpensePage extends Component {
         expense[attribute] = event.target.value
         this.setState({ user: clonedUser })
     }
+
     //triggger patch when leaving an input field
     updateExpense = async (expenseId) => {
         const { userId } = this.props.match.params

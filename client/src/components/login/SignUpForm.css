@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+*{
+  font-family: 'Nunito', sans-serif;
+}
+.mainContainer{
+    border: 1px solid #000;
+    background: linear-gradient(45deg, rgba(153,218,255,1) 0%, rgba(0,128,128,1) 44%, rgba(0,128,128,1) 65%);
+    color: #000;
+    margin-top: 30px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 5px 5px 5px #d1d9da;
+}
+button{
+    background: #13527d;
+    background-image: linear-gradient(to bottom, #13527d, #2980b9);
+    border-radius: 6px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  button:hover { 
+    background-image: linear-gradient(to bottom, #155882, #3498db);
+    text-decoration: none;
+  }
+  input{
+    border: 1px solid rgb(5, 3, 3);
+    height: 30px;
+    width: 280px;
+    padding-left: 10px;
+    border-radius: 0 25px 25px 0 !important;    
+    box-shadow: 1px 1px 1px 1px #ccc;
+    font-size: 1.1rem;
+      
+  }
+  .labelItem{
+      padding: 5px 0;
+  }
