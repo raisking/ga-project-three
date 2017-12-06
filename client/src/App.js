@@ -5,14 +5,16 @@ import ExpensePage from './components/expense/ExpensePage'
 import LogInPage from './components/login/LogInPage'
 import MonthPage from './components/month/MonthPage'
 import styled from 'styled-components'
+import './App.css'
 
 const Wrapper= styled.div`
+  
   border: 1px solid #fff;
   display: flex;
   justify-content: center;
    background-color: #0099cc;
    height: 80px;  
-   margin-bottom: 10  0px;
+   margin-bottom: 100px;
 a{
   text-decoration: none;
   font-size: 1.1em;
@@ -24,8 +26,6 @@ a:hover{
   
    button{
     background-image: linear-gradient(to bottom, #13527d, #2980b9);
-    -webkit-border-radius: 6;
-    -moz-border-radius: 6;
     border-radius: 6px;
     font-family: Arial;
     color: #ffffff;
@@ -40,16 +40,13 @@ a:hover{
   }
 `
 const Items = styled.div`
-
   text-decoration: none;
   display: inline-block;
-
   text-align: center;
   border-radius: 10px;
   font-weight: bold;
 `
 const ItemsA = styled.div`
-
 text-decoration: none;
 display: inline-block;
 padding: 10px;
@@ -59,13 +56,14 @@ border-radius: 10px;
 font-weight: bold;
 
 `
-
-
+const ItemsC = styled.div`
+`
 class App extends Component {
   render() {
     return (
       <Wrapper>
       <Router>
+        
         <div>
           <Items>
           <div>
@@ -77,10 +75,8 @@ class App extends Component {
             <Link to="/login">User Account</Link>
           </div>
           </ItemsA>
-       
           <Switch>
             {<Route exact path="/" component={HomePage} />}
-            {/* <Route exact path="/" component={ExpenseHome} /> */}
             <Route exact path="/login" component={LogInPage}/>
             <Route exact path ="/month/:userId" component={MonthPage} />
             <Route exact path="/expense/:userId" component={ExpensePage}/>

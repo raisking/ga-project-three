@@ -6,15 +6,14 @@ import { Redirect } from 'react-router'
 import './LoginPage.css'
 
 const Wrapper = styled.div`
-    background-color: #3b68af;
+    background: linear-gradient(45deg, rgba(153,218,255,1) 0%, rgba(0,128,128,1) 44%, rgba(0,128,128,1) 65%);
     color: #000;
     padding: 50px;
-    width: 80%;
+    width: 100%;
     box-shadow: 10px 10px 5px #888888;
 `
-
 const Container = styled.div`
-    background-color: #ccc;
+    background-color: #fff;
     border: 1px solid #000;
     color: #000;
     padding: 30px;

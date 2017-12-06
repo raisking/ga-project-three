@@ -9,7 +9,7 @@ import ExpensePage from '../expense/ExpensePage'
 
 const Wrapper = styled.div`
 border: 1px solid #000;
-background-color: #3b68af;
+background: linear-gradient(45deg, rgba(153,218,255,1) 0%, rgba(0,128,128,1) 44%, rgba(0,128,128,1) 65%);
 color: #000;
 padding: 30px;
 width: 100%;
@@ -117,13 +117,9 @@ class MonthPage extends Component {
                             <li>City: {this.state.user.city} </li>
                             <li>State: {this.state.user.state} </li>
                             <li>Zipcode: {this.state.user.zipcode} </li>
-
                         </ul>
-
-
                     </Container>
                     <h1>{this.state.user.userName}'s Monthly Income</h1>
-
                     <Link to={`/expense/${this.state.user._id}`}>
                         <button>Expense</button></Link>
 
@@ -132,8 +128,7 @@ class MonthPage extends Component {
                     <MonthsList months={this.state.user.months}
                         handleChange={this.handleChange}
                         deleteMonth={this.deleteMonth}
-                        updateMonth={this.updateMonth}
-                    />
+                        updateMonth={this.updateMonth}/>
                     <Router>
                         <Switch>
 

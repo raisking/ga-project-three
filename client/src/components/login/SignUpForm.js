@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Redirect } from 'react-router-dom'
 import './SignUpForm.css'
 
-
 class SignUpForm extends Component {
     state = {
         newUser: {
@@ -41,64 +40,74 @@ class SignUpForm extends Component {
                 <div className="mainContainer">
                     <h2>Create a new user account</h2>
                     <form onSubmit={this.handleSubmit}>
+                    <div className ="flexboxDiv">
                         <div className="labelItem">
                             <label htmlFor="userName"> User Name</label>
                         </div>
                         <div>
                             <input onChange={this.handleChange} name="userName"
-                                type="text" placeholder="username" value={this.state.newUser.userName}
+                                type="text" value={this.state.newUser.userName}
                             />
                         </div>
+                        </div>
+                        <div className ="flexboxDiv">
                         <div className="labelItem">
                             <label htmlFor="password">Password</label>
                         </div>
                         <div>
                             <input onChange={this.handleChange} value={this.state.newUser.password}
-                                name="password" placeholder="password" type="password" />
+                                name="password" type="password" />
                         </div>
+                        </div>
+                        <div className ="flexboxDiv">
                         <div className="labelItem">
                             <label htmlFor="email">Email</label>
                         </div>
                         <div>
                             <input onChange={this.handleChange} value={this.state.newUser.email}
-                                name="email" placeholder="email" type="text" />
+                                name="email" type="text" />
                         </div>
+                        </div>
+                        <div className ="flexboxDiv">
                         <div className="labelItem">
                             <label htmlFor="street">Street</label>
                         </div>
                         <div>
                             <input onChange={this.handleChange} value={this.state.newUser.street}
-                                name="street" placeholder="street" type="text" />
+                                name="street" type="text" />
                         </div>
+                        </div>
+                        <div className ="flexboxDiv">
                         <div className="labelItem">
                             <label htmlFor="city">City</label>
                         </div>
                         <div>
                             <input onChange={this.handleChange} value={this.state.newUser.city}
-                                name="city" placeholder="city" type="text" />
+                                name="city" type="text" />
                         </div>
+                        </div>
+                        <div className ="flexboxDiv">
                         <div className="labelItem">
                             <label htmlFor="state">State</label>
                         </div>
                         <div>
                             <input onChange={this.handleChange} value={this.state.newUser.state}
-                                name="state" placeholder="state" type="text" />
+                                name="state" type="text" />
                         </div>
+                        </div>
+                        <div className ="flexboxDiv">
                         <div className="labelItem">
                             <label htmlFor="zipcode">Zipcode</label>
                         </div>
                         <div>
                             <input onChange={this.handleChange}
                                 value={this.state.newUser.zipcode}
-                                name="zipcode" placeholder="zipcode" type="text" />
+                                name="zipcode" type="text" />
+                        </div>
                         </div>
                         <button>Create New User</button>
-                  
-
                     </form>
-
                 </div>
-        
         );
     }
 }

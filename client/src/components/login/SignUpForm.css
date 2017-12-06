@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 *{
   font-family: 'Nunito', sans-serif;
+  
+}
+body{
+  background-image: url('https://unsplash.com/photos/ZKVBM2_Dp84');
 }
 .mainContainer{
     border: 1px solid #000;
@@ -27,15 +31,23 @@ button{
     text-decoration: none;
   }
   input{
+    display: inline-block;
     border: 1px solid rgb(5, 3, 3);
     height: 30px;
     width: 280px;
-    padding-left: 10px;
-    border-radius: 0 25px 25px 0 !important;    
+    padding-left: 10px;  
     box-shadow: 1px 1px 1px 1px #ccc;
     font-size: 1.1rem;
       
   }
   .labelItem{
       padding: 5px 0;
+      font-weight: bold;
+ 
+      width: 20%;
+  }
+  .flexboxDiv{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
   }

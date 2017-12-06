@@ -5,7 +5,7 @@ import ExpenseList from './ExpenseList'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 const Wrapper = styled.div`
-background-color:#3b68af;
+ background: linear-gradient(45deg, rgba(153,218,255,1) 0%, rgba(0,128,128,1) 44%, rgba(0,128,128,1) 65%);
 color: #000;
 padding: 30px;
 width: 100%;
